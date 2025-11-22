@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="music.css">
+</head>
+<body>
+
+<div class="main-layout">
+    
+    <!-- ЛЕВАЯ ПАНЕЛЬ: БИБЛИОТЕКА И ПОИСК -->
+    <section id="library-panel" class="panel library-active">
+        <div class="header">
+            <div class="user-info">
+                <div class="user-avatar"></div>
+                <span class="user-greeting">Hello, User</span>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search for artists, songs...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <div class="scroll-area">
+            <div class="section-title">Trending Now</div>
+            <div class="popular-scroll" id="popular-container">
+                <!-- JS injects cards here -->
+                <div class="loading-state">Loading charts...</div>
+            </div>
+
+            <div class="section-title">Recently Played</div>
+            <div class="vertical-list" id="results-container">
+                <!-- JS injects list here -->
+                <div class="empty-state">Search for your favorite music above</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРАВАЯ ПАНЕЛЬ: ПЛЕЕР -->
+    <section id="player-panel" class="panel player-hidden">
+        <div class="player-header">
+            <button class="back-btn" id="back-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <span>Now Playing</span>
+            <div style="width: 24px;"></div> <!-- Spacer -->
+        </div>
+
+        <div class="player-content">
+            <div class="album-art-wrapper">
+                <div class="album-art-container">
+                    <img id="track-cover" src="https://via.placeholder.com/600/1b1c44/ffffff?text=Music" alt="Cover">
+                </div>
+                <!-- Декор: размытие под обложкой -->
+                <div class="glow-effect"></div>
+            </div>
+
+            <div class="track-details">
+                <h2 class="track-title">Select a track</h2>
+                <p class="track-artist">to start listening</p>
+                <p class="track-album"></p>
+            </div>
+
+            <div class="visualizer" id="visualizer">
+                <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+                <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+                <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+            </div>
+
+            <div class="progress-area">
+                <input type="range" id="progress-bar" value="0" min="0" max="100">
+                <div class="time-stamps">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">0:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn secondary" id="prev-btn">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                </button>
+                <button class="control-btn play-pause-btn" id="play-pause-btn">▶</button>
+                <button class="control-btn secondary" id="next-btn">
+                    <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="music.js"></script>
+
+</body>
+</html>
