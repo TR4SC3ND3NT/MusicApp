@@ -154,5 +154,5 @@ audio.play(); // Запускаем воспроизведение
 1. **Проверь интернет** - нужен для поиска музыки
 2. **Обнови страницу** - может помочь
 3. **Попробуй другой браузер** - лучше всего Chrome/Firefox
-   Ссылка на презентацию:
+4. **Ссылка на презентацию:**
 https://www.canva.com/design/DAG5aMHHSRk/ZQY0KfukJthRf-jWOAw1tw/view?utm_content=DAG5aMHHSRk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha9d51ef578
